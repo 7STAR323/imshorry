@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🔄 For You — My Journey</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300..700;1,14..32,400..700&family=Playfair+Display:ital,wght@0,400..700;1,500..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(145deg, #0f0c0a 0%, #1a1411 40%, #241b17 100%);
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            padding: 1rem;
+            color: #dccfc8;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            padding: 1.2rem 0 1rem;
+            border-bottom: 1px solid rgba(180, 140, 120, 0.08);
+            margin-bottom: 1.2rem;
+        }
+
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-style: italic;
+            font-size: 1.8rem;
+            color: #e6d6cc;
+            letter-spacing: -0.3px;
+        }
+
+        .header .sub {
+            font-size: 0.7rem;
+            color: #a8887a;
+            letter-spacing: 2px;
+            font-weight: 300;
+            margin-top: 0.2rem;
+        }
+
+        .header .days {
+            display: inline-block;
+            background: rgba(180, 140, 120, 0.08);
+            padding: 0.2rem 1rem;
+            border-radius: 40px;
+            font-size: 0.65rem;
+            color: #b28a7a;
+            margin-top: 0.5rem;
+            border: 1px solid rgba(180, 140, 120, 0.06);
+        }
+
+        /* DON'T CRY SECTION */
+        .dont-cry-section {
+            background: rgba(30, 22, 19, 0.6);
+            backdrop-filter: blur(8px);
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            border: 1px solid rgba(180, 140, 120, 0.08);
+            margin-bottom: 1.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dont-cry-section .dc-header {
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .dont-cry-section .dc-header i {
+            font-size: 1.4rem;
+            color: #8f6f60;
+            opacity: 0.6;
+        }
+
+        .dont-cry-section .dc-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.2rem;
+            color: #e6d6cc;
+        }
+
+        .dont-cry-section .dc-content {
+            display: flex;
+            gap: 1.2rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .dont-cry-section .dc-image {
+            flex: 0 0 120px;
+            height: 120px;
+            border-radius: 0.8rem;
+            overflow: hidden;
+            border: 1px solid rgba(180, 140, 120, 0.1);
+            background: rgba(20, 14, 12, 0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dont-cry-section .dc-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .dont-cry-section .dc-text {
+            flex: 1;
+            min-width: 180px;
+        }
+
+        .dont-cry-section .dc-text .dc-message {
+            font-size: 0.9rem;
+            color: #dccfc8;
+            font-weight: 300;
+            line-height: 1.6;
+        }
+
+        .dont-cry-section .dc-text .dc-message .highlight {
+            color: #e8d3c8;
+            font-weight: 400;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
+
+        .dont-cry-section .dc-text .dc-message .pain {
+            color: #b28a7a;
+        }
+
+        .dont-cry-section .dc-text .dc-footer {
+            margin-top: 0.6rem;
+            font-size: 0.7rem;
+            color: #7a645a;
+            letter-spacing: 0.5px;
+            border-top: 1px solid rgba(180, 140, 120, 0.06);
+            padding-top: 0.6rem;
+        }
+
+        .dont-cry-section .dc-text .dc-footer i {
+            color: #8f6f60;
+            margin-right: 6px;
+        }
+
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.6rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .stat-card {
+            background: rgba(30, 22, 19, 0.6);
+            backdrop-filter: blur(8px);
+            border-radius: 0.8rem;
+            padding: 0.8rem 0.4rem;
+            text-align: center;
+            border: 1px solid rgba(180, 140, 120, 0.06);
+        }
+
+        .stat-card .number {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #e6d6cc;
+            display: block;
+        }
+
+        .stat-card .label {
+            font-size: 0.55rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #a8887a;
+            margin-top: 0.1rem;
+        }
+
+        /* Letter Section */
+        .letter-section {
+            background: rgba(30, 22, 19, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            border: 1px solid rgba(180, 140, 120, 0.06);
+            margin-bottom: 1.2rem;
+        }
+
+        .letter-section .prompt-box {
+            background: rgba(180, 140, 120, 0.05);
+            border-left: 3px solid #8f6f60;
+            padding: 0.8rem 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .letter-section .prompt-box .prompt-label {
+            font-size: 0.6rem;
+            color: #7a645a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .letter-section .prompt-box .prompt-text {
+            font-size: 0.9rem;
+            color: #e6d6cc;
+            font-weight: 300;
+            font-style: italic;
+            margin-top: 0.2rem;
+        }
+
+        .letter-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #e6d6cc;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .letter-section h2 i {
+            color: #b28a7a;
+            font-size: 0.9rem;
+        }
+
+        .letter-section textarea {
+            width: 100%;
+            background: rgba(20, 14, 12, 0.6);
+            border: 1px solid rgba(180, 140, 120, 0.1);
+            border-radius: 0.8rem;
+            padding: 0.8rem;
+            color: #dccfc8;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 300;
+            resize: vertical;
+            min-height: 80px;
+            transition: border 0.3s;
+        }
+
+        .letter-section textarea:focus {
+            outline: none;
+            border-color: rgba(180, 140, 120, 0.3);
+        }
+
+        .letter-section textarea::placeholder {
+            color: #7a645a;
+            font-style: italic;
+            font-size: 0.8rem;
+        }
+
+        .letter-section .char-count {
+            text-align: right;
+            font-size: 0.6rem;
+            color: #7a645a;
+            margin-top: 0.2rem;
+        }
+
+        /* Calendar Section */
+        .calendar-section {
+            background: rgba(30, 22, 19, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            border: 1px solid rgba(180, 140, 120, 0.06);
+            margin-bottom: 1.2rem;
+        }
+
+        .calendar-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #e6d6cc;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .calendar-section h2 i {
+            color: #b28a7a;
+            font-size: 0.9rem;
+        }
+
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 0.2rem;
+        }
+
+        .calendar-day {
+            aspect-ratio: 1;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.5rem;
+            color: #7a645a;
+            background: rgba(30, 22, 19, 0.3);
+            border: 1px solid rgba(180, 140, 120, 0.04);
+            transition: all 0.2s;
+            padding: 0.1rem;
+            cursor: default;
+        }
+
+        .calendar-day .day-num {
+            font-size: 0.6rem;
+            font-weight: 400;
+        }
+
+        .calendar-day .day-label {
+            font-size: 0.35rem;
+            opacity: 0.4;
+            text-transform: uppercase;
+        }
+
+        .calendar-day.done {
+            background: rgba(100, 180, 100, 0.15);
+            border-color: rgba(100, 180, 100, 0.15);
+        }
+
+        .calendar-day.done .day-num {
+            color: #8fbf8f;
+        }
+
+        .calendar-day.missed {
+            background: rgba(180, 80, 80, 0.12);
+            border-color: rgba(180, 80, 80, 0.12);
+        }
+
+        .calendar-day.missed .day-num {
+            color: #bf8f8f;
+        }
+
+        .calendar-day.today {
+            border-color: rgba(180, 140, 120, 0.3);
+        }
+
+        .calendar-day.today .day-num {
+            color: #dccfc8;
+        }
+
+        .calendar-day.future {
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .calendar-day.empty {
+            border: none;
+            background: transparent;
+        }
+
+        .calendar-legend {
+            display: flex;
+            gap: 1rem;
+            margin-top: 0.6rem;
+            justify-content: center;
+            font-size: 0.6rem;
+            color: #7a645a;
+        }
+
+        .calendar-legend span {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .calendar-legend .dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .calendar-legend .dot.green {
+            background: rgba(100, 180, 100, 0.3);
+        }
+
+        .calendar-legend .dot.red {
+            background: rgba(180, 80, 80, 0.3);
+        }
+
+        .calendar-legend .dot.gray {
+            background: rgba(30, 22, 19, 0.3);
+        }
+
+        /* Today's Log */
+        .log-section {
+            background: rgba(30, 22, 19, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            border: 1px solid rgba(180, 140, 120, 0.06);
+            margin-bottom: 1.2rem;
+        }
+
+        .log-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #e6d6cc;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .log-section h2 i {
+            color: #b28a7a;
+            font-size: 0.9rem;
+        }
+
+        .log-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(180, 140, 120, 0.04);
+        }
+
+        .log-item:last-child {
+            border-bottom: none;
+        }
+
+        .log-item .checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(180, 140, 120, 0.2);
+            border-radius: 4px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            flex-shrink: 0;
+            background: transparent;
+        }
+
+        .log-item .checkbox:hover {
+            border-color: rgba(180, 140, 120, 0.4);
+        }
+
+        .log-item .checkbox.done {
+            background: #8f6f60;
+            border-color: #8f6f60;
+        }
+
+        .log-item .checkbox.done i {
+            color: #1a1411;
+            font-size: 0.6rem;
+        }
+
+        .log-item .log-text {
+            font-size: 0.8rem;
+            color: #dccfc8;
+            font-weight: 300;
+            flex: 1;
+        }
+
+        .log-item .log-text.done {
+            text-decoration: line-through;
+            opacity: 0.4;
+        }
+
+        .log-item .time {
+            font-size: 0.6rem;
+            color: #7a645a;
+            font-weight: 300;
+        }
+
+        /* Reflection */
+        .reflection-section {
+            background: rgba(30, 22, 19, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            border: 1px solid rgba(180, 140, 120, 0.06);
+            margin-bottom: 1.2rem;
+        }
+
+        .reflection-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #e6d6cc;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .reflection-section h2 i {
+            color: #b28a7a;
+            font-size: 0.9rem;
+        }
+
+        .reflection-section textarea {
+            width: 100%;
+            background: rgba(20, 14, 12, 0.6);
+            border: 1px solid rgba(180, 140, 120, 0.1);
+            border-radius: 0.8rem;
+            padding: 0.8rem;
+            color: #dccfc8;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 300;
+            resize: vertical;
+            min-height: 80px;
+            transition: border 0.3s;
+        }
+
+        .reflection-section textarea:focus {
+            outline: none;
+            border-color: rgba(180, 140, 120, 0.3);
+        }
+
+        .reflection-section textarea::placeholder {
+            color: #7a645a;
+            font-size: 0.8rem;
+        }
+
+        .reflection-section .char-count {
+            text-align: right;
+            font-size: 0.6rem;
+            color: #7a645a;
+            margin-top: 0.2rem;
+        }
+
+        .save-btn {
+            width: 100%;
+            background: rgba(40, 28, 24, 0.4);
+            border: 1px solid rgba(180, 140, 120, 0.15);
+            color: #dccfc8;
+            padding: 0.7rem;
+            border-radius: 60px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.6rem;
+            margin: 1.2rem 0 0.3rem;
+        }
+
+        .save-btn:hover {
+            background: rgba(60, 44, 38, 0.5);
+            border-color: rgba(180, 140, 120, 0.3);
+            color: #f0e0d8;
+        }
+
+        .save-btn:active {
+            transform: scale(0.98);
+        }
+
+        .save-btn i {
+            color: #b28a7a;
+            font-size: 0.8rem;
+        }
+
+        /* History */
+        .history-section {
+            background: rgba(30, 22, 19, 0.5);
+            backdrop-filter: blur(8px);
+            border-radius: 1.2rem;
+            padding: 1.2rem;
+            border: 1px solid rgba(180, 140, 120, 0.06);
+        }
+
+        .history-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 400;
+            font-size: 1.1rem;
+            color: #e6d6cc;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .history-section h2 i {
+            color: #b28a7a;
+            font-size: 0.9rem;
+        }
+
+        .history-item {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(180, 140, 120, 0.04);
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .history-item:last-child {
+            border-bottom: none;
+        }
+
+        .history-item .h-date {
+            font-size: 0.6rem;
+            color: #7a645a;
+            font-weight: 300;
+            min-width: 70px;
+            padding-top: 0.1rem;
+        }
+
+        .history-item .h-content {
+            flex: 1;
+        }
+
+        .history-item .h-content .h-text {
+            font-size: 0.75rem;
+            color: #dccfc8;
+            font-weight: 300;
+            line-height: 1.4;
+        }
+
+        .history-item .h-content .h-actions {
+            font-size: 0.6rem;
+            color: #7a645a;
+            margin-top: 0.2rem;
+        }
+
+        .history-item .h-content .h-actions i {
+            margin-right: 0.2rem;
+            color: #8f6f60;
+            font-size: 0.5rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 1.5rem 0;
+            color: #7a645a;
+            font-weight: 300;
+            font-size: 0.8rem;
+        }
+
+        .empty-state i {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 0.5rem;
+            opacity: 0.3;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 1.5rem 0 0.5rem;
+            font-size: 0.6rem;
+            color: #7a645a;
+            opacity: 0.4;
+            letter-spacing: 1px;
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(30, 22, 19, 0.95);
+            backdrop-filter: blur(12px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 60px;
+            border: 1px solid rgba(180, 140, 120, 0.15);
+            color: #dccfc8;
+            font-size: 0.75rem;
+            font-weight: 300;
+            opacity: 0;
+            transition: all 0.4s ease;
+            z-index: 100;
+            pointer-events: none;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        @media (max-width: 650px) {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .log-item {
+                flex-wrap: wrap;
+            }
+            .log-item .time {
+                width: 100%;
+                padding-left: 2.2rem;
+            }
+            .history-item {
+                flex-direction: column;
+                gap: 0.1rem;
+            }
+            .header h1 {
+                font-size: 1.4rem;
+            }
+            .dont-cry-section .dc-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            .dont-cry-section .dc-image {
+                flex: 0 0 100px;
+                width: 100px;
+                height: 100px;
+            }
+            .dont-cry-section .dc-header {
+                justify-content: center;
+            }
+            .calendar-grid {
+                gap: 0.1rem;
+            }
+            .calendar-day {
+                font-size: 0.4rem;
+            }
+            .calendar-day .day-num {
+                font-size: 0.5rem;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .stats {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.4rem;
+            }
+            .stat-card .number {
+                font-size: 1.2rem;
+            }
+        }
+
+        ::-webkit-scrollbar {
+            width: 4px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(30, 22, 19, 0.3);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(180, 140, 120, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Header -->
+    <div class="header">
+        <h1>⟳ for you — my journey</h1>
+        <div class="sub">showing up · staying honest · rebuilding trust</div>
+        <div class="days">
+            <i class="fas fa-calendar-day" style="margin-right: 4px;"></i>
+            day <span id="dayCounter">1</span>
+        </div>
+    </div>
+
+    <!-- DON'T CRY SECTION -->
+    <div class="dont-cry-section">
+        <div class="dc-header">
+            <i class="fas fa-droplet"></i>
+            <h2>don't cry</h2>
+        </div>
+        <div class="dc-content">
+            <div class="dc-image">
+                <img src="YOUR_IMAGE_URL_HERE" alt="don't cry">
+            </div>
+            <div class="dc-text">
+                <div class="dc-message">
+                    <span class="pain">I know you've cried because of me.</span><br>
+                    I've seen your tears, and I know I caused them.<br><br>
+                    I'm not here to say <span class="highlight">"don't cry"</span> — 
+                    I'm here to say:<br>
+                    <span class="highlight">"cry if you need to. I'll stay."</span><br><br>
+                    <span style="font-size: 0.9rem; opacity: 0.7;">
+                        Your tears are not weakness. They are the proof that you loved me, 
+                        and I failed you.
+                    </span>
+                </div>
+                <div class="dc-footer">
+                    <i class="fas fa-heart" style="color: #8f6f60;"></i>
+                    I see your pain. I remember every tear.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats" id="statsContainer">
+        <div class="stat-card">
+            <span class="number" id="totalDays">1</span>
+            <span class="label">Days committed</span>
+        </div>
+        <div class="stat-card">
+            <span class="number" id="actionsDone">0</span>
+            <span class="label">Actions completed</span>
+        </div>
+        <div class="stat-card">
+            <span class="number" id="streakDays">1</span>
+            <span class="label">Day streak</span>
+        </div>
+        <div class="stat-card">
+            <span class="number" id="reflectionsCount">0</span>
+            <span class="label">Reflections written</span>
+        </div>
+    </div>
+
+    <!-- Letter Section -->
+    <div class="letter-section">
+        <h2><i class="fas fa-envelope"></i> a letter to you</h2>
+        <div class="prompt-box" id="promptBox">
+            <div class="prompt-label">today's prompt — day <span id="promptDay">1</span></div>
+            <div class="prompt-text" id="promptText">I know I broke your trust. Today I sat with that guilt instead of running from it.</div>
+        </div>
+        <textarea id="letterInput" placeholder="Write your letter here..."></textarea>
+        <div class="char-count"><span id="letterCharCount">0</span> characters</div>
+    </div>
+
+    <!-- Calendar Section - FIXED -->
+    <div class="calendar-section">
+        <h2><i class="fas fa-calendar-alt"></i> my consistency</h2>
+        <div id="calendarContainer">
+            <div class="calendar-empty">Loading...</div>
+        </div>
+        <div class="calendar-legend">
+            <span><span class="dot green"></span> showed up</span>
+            <span><span class="dot red"></span> missed</span>
+            <span><span class="dot gray"></span> no entry</span>
+        </div>
+    </div>
+
+    <!-- Today's Log -->
+    <div class="log-section">
+        <h2><i class="fas fa-list-check"></i> today's actions</h2>
+        <div id="logContainer"></div>
+        <div style="margin-top: 0.6rem; font-size: 0.6rem; color: #7a645a; text-align: center; border-top: 1px solid rgba(180,140,120,0.04); padding-top: 0.6rem;">
+            <i class="fas fa-arrow-right" style="margin-right: 4px;"></i>
+            click each action to mark it done
+        </div>
+    </div>
+
+    <!-- Reflection -->
+    <div class="reflection-section">
+        <h2><i class="fas fa-pen"></i> today's reflection</h2>
+        <textarea id="reflectionInput" placeholder="How did I show up today? Where did I fail? What did I learn?"></textarea>
+        <div class="char-count"><span id="charCount">0</span> characters</div>
+        <button class="save-btn" id="saveBtn">
+            <i class="fas fa-save"></i> save today's entry
+        </button>
+    </div>
+
+    <!-- History -->
+    <div class="history-section">
+        <h2><i class="fas fa-clock-rotate-left"></i> my journey so far</h2>
+        <div id="historyContainer">
+            <div class="empty-state">
+                <i class="fas fa-book-open"></i>
+                No entries yet. Start your journey today.
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <i class="fas fa-seedling" style="margin: 0 4px;"></i>
+        built for consistency, not perfection
+    </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script>
+    (function() {
+        // ----- 30-DAY LETTER PROMPTS -----
+        const LETTER_PROMPTS = [
+            "I know I broke your trust. Today I sat with that guilt instead of running from it.",
+            "I thought about the time you cried in the kitchen. I hate that I caused that.",
+            "I'm scared you'll never see me the same way. But I understand why.",
+            "Today I caught myself about to lie and stopped. It's small, but it's something.",
+            "I wrote down every promise I broke. Seeing them all together made me sick. You deserved better.",
+            "I realized today that I was more afraid of losing you than of actually changing. That's shifting now.",
+            "I thought about what it must feel like to be you. To love someone who keeps hurting you. I'm sorry.",
+            "I didn't make excuses today. I just sat with the truth of what I did.",
+            "I read something about rebuilding trust. It said it takes 2-5 years. I'm ready for that if you are.",
+            "I asked myself: would I trust me? The answer was no. That hurts, but it's honest.",
+            "I remembered the look on your face when you found out. I wish I could erase that moment.",
+            "Today I chose honesty over comfort. Even though it was harder.",
+            "I thought about who I want to become. Not for you — for me. But I hope you'll be there to see it.",
+            "I'm learning that love isn't about grand gestures. It's about showing up when no one's watching.",
+            "I messed up today. I caught myself slipping into old patterns. I'm not giving up.",
+            "I wrote you a letter in my head today. I couldn't say it out loud yet. But I'm working on it.",
+            "I thought about all the times you defended me to other people. I never deserved that. I want to.",
+            "Today I sat with the shame instead of numbing it. It was brutal. But I survived.",
+            "I realized I've been making this about my guilt instead of your pain. That changes now.",
+            "I'm starting to understand that trust isn't one big thing. It's 1000 small things over time.",
+            "I thought about what I'd say to you if I had one chance. I'd say: I see you. I'm sorry. I'll do the work.",
+            "Today I chose to tell the truth even when a lie would have been easier.",
+            "I'm learning that healing isn't linear. Some days are forward. Some are backward. I'll keep going.",
+            "I asked myself: am I actually changing or just performing? I don't fully know yet.",
+            "I thought about your voice. The way it sounds when you're happy versus when you're hurt. I miss the happy one.",
+            "I realized today that I can't fix the past. But I can show up differently right now.",
+            "I'm scared that it's too late. But I'm more scared of not trying.",
+            "I sat with the discomfort today. I didn't run. That's new.",
+            "I thought about what it would mean if you never trust me again. I'll still do the work.",
+            "Today I'm just grateful you're still here. Even if you're angry. Even if you're distant. You're still here."
+        ];
+
+        // ----- ACTIONS -----
+        const DEFAULT_ACTIONS = [
+            { id: 'self_check', label: 'Checked in with myself (honest self-reflection)' },
+            { id: 'transparency', label: 'Was fully transparent about my day (no hiding)' },
+            { id: 'checkin', label: 'Asked her how she\'s feeling & listened' },
+            { id: 'listened', label: 'Listened without defending myself' },
+            { id: 'ask_feedback', label: 'Asked her for honest feedback about my behavior (and didn\'t get defensive)' },
+            { id: 'honest', label: 'Caught a lie and corrected it immediately' },
+            { id: 'action', label: 'Took action on something I promised' },
+            { id: 'read', label: 'Read or learned about rebuilding trust' },
+        ];
+
+        // ----- DATA LAYER -----
+        let entries = [];
+        const START_DATE = new Date('2026-06-22');
+
+        function getTodayKey() {
+            return new Date().toISOString().split('T')[0];
+        }
+
+        function getDayNumber() {
+            const now = new Date();
+            const diffTime = Math.abs(now - START_DATE);
+            return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+        }
+
+        function getPromptForDay(dayNum) {
+            const index = (dayNum - 1) % LETTER_PROMPTS.length;
+            return LETTER_PROMPTS[index];
+        }
+
+        function loadData() {
+            try {
+                const raw = localStorage.getItem('accountability_data');
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    if (Array.isArray(parsed)) {
+                        entries = parsed.map(e => ({
+                            date: e.date || getTodayKey(),
+                            actions: e.actions || {},
+                            reflection: e.reflection || '',
+                            letter: e.letter || '',
+                        }));
+                        return true;
+                    }
+                }
+            } catch (e) {
+                console.warn('Failed to load data, starting fresh');
+            }
+            return false;
+        }
+
+        function saveData() {
+            try {
+                localStorage.setItem('accountability_data', JSON.stringify(entries));
+            } catch (e) {
+                console.warn('Failed to save data');
+            }
+        }
+
+        function getTodayEntry() {
+            const today = getTodayKey();
+            let entry = entries.find(e => e.date === today);
+            if (!entry) {
+                entry = { date: today, actions: {}, reflection: '', letter: '' };
+                entries.push(entry);
+                entries.sort((a, b) => a.date.localeCompare(b.date));
+                saveData();
+            }
+            return entry;
+        }
+
+        function getEntryForDate(dateStr) {
+            return entries.find(e => e.date === dateStr);
+        }
+
+        function getAllDates() {
+            return entries.map(e => e.date).sort();
+        }
+
+        function countActionsDone(entry) {
+            if (!entry || !entry.actions) return 0;
+            return Object.values(entry.actions).filter(v => v === true).length;
+        }
+
+        function calculateStreak() {
+            const dates = getAllDates();
+            if (dates.length === 0) return 0;
+            let streak = 0;
+            let current = new Date();
+            for (let i = 0; i < 365; i++) {
+                const dateStr = current.toISOString().split('T')[0];
+                const entry = getEntryForDate(dateStr);
+                if (entry && countActionsDone(entry) > 0) {
+                    streak++;
+                    current.setDate(current.getDate() - 1);
+                } else {
+                    break;
+                }
+            }
+            return streak;
+        }
+
+        function getTotalDays() {
+            return entries.length;
+        }
+
+        function getTotalReflections() {
+            return entries.filter(e => e.reflection && e.reflection.trim().length > 0).length;
+        }
+
+        // ----- RENDER -----
+        function renderStats() {
+            const todayEntry = getTodayEntry();
+            const done = countActionsDone(todayEntry);
+            const totalDays = getTotalDays();
+            const streak = calculateStreak();
+            const reflections = getTotalReflections();
+
+            document.getElementById('totalDays').textContent = totalDays;
+            document.getElementById('actionsDone').textContent = done;
+            document.getElementById('streakDays').textContent = streak;
+            document.getElementById('reflectionsCount').textContent = reflections;
+
+            const dayNum = getDayNumber();
+            document.getElementById('dayCounter').textContent = dayNum;
+        }
+
+        function renderPrompt() {
+            const dayNum = getDayNumber();
+            document.getElementById('promptDay').textContent = dayNum;
+            document.getElementById('promptText').textContent = getPromptForDay(dayNum);
+        }
+
+        function renderLog() {
+            const container = document.getElementById('logContainer');
+            const todayEntry = getTodayEntry();
+            const actions = todayEntry.actions || {};
+
+            let html = '';
+            DEFAULT_ACTIONS.forEach(action => {
+                const isDone = actions[action.id] === true;
+                html += `
+                    <div class="log-item" data-action-id="${action.id}">
+                        <div class="checkbox ${isDone ? 'done' : ''}" data-action-id="${action.id}">
+                            ${isDone ? '<i class="fas fa-check"></i>' : ''}
+                        </div>
+                        <div class="log-text ${isDone ? 'done' : ''}">${action.label}</div>
+                        <div class="time">${isDone ? '✓ done' : 'pending'}</div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+
+            container.querySelectorAll('.checkbox').forEach(el => {
+                el.addEventListener('click', function() {
+                    const actionId = this.dataset.actionId;
+                    toggleAction(actionId);
+                });
+            });
+        }
+
+        function toggleAction(actionId) {
+            const todayEntry = getTodayEntry();
+            const actions = todayEntry.actions || {};
+            actions[actionId] = !actions[actionId];
+            todayEntry.actions = actions;
+            saveData();
+            renderLog();
+            renderStats();
+            renderCalendar();
+            showToast(actions[actionId] ? '✅ Action completed!' : '↩️ Action undone');
+        }
+
+        function renderLetter() {
+            const todayEntry = getTodayEntry();
+            const textarea = document.getElementById('letterInput');
+            if (textarea) {
+                textarea.value = todayEntry.letter || '';
+                updateLetterCharCount();
+            }
+        }
+
+        function updateLetterCharCount() {
+            const textarea = document.getElementById('letterInput');
+            const count = document.getElementById('letterCharCount');
+            if (textarea && count) {
+                count.textContent = textarea.value.length;
+            }
+        }
+
+        function renderReflection() {
+            const todayEntry = getTodayEntry();
+            const textarea = document.getElementById('reflectionInput');
+            if (textarea) {
+                textarea.value = todayEntry.reflection || '';
+                updateCharCount();
+            }
+        }
+
+        function updateCharCount() {
+            const textarea = document.getElementById('reflectionInput');
+            const count = document.getElementById('charCount');
+            if (textarea && count) {
+                count.textContent = textarea.value.length;
+            }
+        }
+
+        function renderCalendar() {
+            const container = document.getElementById('calendarContainer');
+            const today = new Date();
+            const month = today.getMonth();
+            const year = today.getFullYear();
+            const firstDay = new Date(year, month, 1).getDay();
+            const daysInMonth = new Date(year, month + 1, 0).getDate();
+            const todayStr = getTodayKey();
+            const todayDate = today.getDate();
+
+            let html = '';
+            const dayNames = ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'];
+            
+            dayNames.forEach(name => {
+                html += `<div class="calendar-day" style="border: none; font-size: 0.5rem; color: #7a645a; aspect-ratio: auto; padding: 0.2rem 0;">${name}</div>`;
+            });
+
+            for (let i = 0; i < firstDay; i++) {
+                html += `<div class="calendar-day empty" style="border: none; background: transparent;"></div>`;
+            }
+
+            for (let d = 1; d <= daysInMonth; d++) {
+                const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(d).padStart(2, '0')}`;
+                const entry = getEntryForDate(dateStr);
+                const isToday = dateStr === todayStr;
+                const isPast = dateStr < todayStr;
+                const isFuture = dateStr > todayStr;
+                
+                let cls = 'calendar-day';
+                
+                if (isToday) {
+                    cls += ' today';
+                } else if (isFuture) {
+                    cls += ' future';
+                }
+                
+                if (isPast) {
+                    if (entry && countActionsDone(entry) > 0) {
+                        cls += ' done';
+                    } else if (entry) {
+                        cls += ' missed';
+                    }
+                }
+
+                const dayLabel = new Date(year, month, d).toLocaleDateString('en', { weekday: 'short' }).substring(0, 2);
+                
+                html += `
+                    <div class="${cls}">
+                        <span class="day-num">${d}</span>
+                        <span class="day-label">${dayLabel}</span>
+                    </div>
+                `;
+            }
+
+            container.innerHTML = html;
+        }
+
+        function renderHistory() {
+            const container = document.getElementById('historyContainer');
+            const sortedEntries = [...entries].sort((a, b) => b.date.localeCompare(a.date));
+
+            if (sortedEntries.length === 0 || sortedEntries.every(e => !e.reflection && countActionsDone(e) === 0 && !e.letter)) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-book-open"></i>
+                        No entries yet. Start your journey today.
+                    </div>
+                `;
+                return;
+            }
+
+            let html = '';
+            sortedEntries.forEach(entry => {
+                const doneCount = countActionsDone(entry);
+                const total = DEFAULT_ACTIONS.length;
+                const hasReflection = entry.reflection && entry.reflection.trim().length > 0;
+                const hasLetter = entry.letter && entry.letter.trim().length > 0;
+
+                const dateObj = new Date(entry.date + 'T00:00:00');
+                const dateStr = dateObj.toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+
+                let status = `${doneCount}/${total} actions done`;
+                if (hasLetter) status += ' · 💌 letter';
+                if (hasReflection) status += ' · 📝 reflection';
+
+                html += `
+                    <div class="history-item">
+                        <div class="h-date">${dateStr}</div>
+                        <div class="h-content">
+                            <div class="h-text">
+                                ${hasLetter ? '💌 ' + entry.letter.substring(0, 100) + (entry.letter.length > 100 ? '...' : '') : hasReflection ? entry.reflection.substring(0, 100) + (entry.reflection.length > 100 ? '...' : '') : 'No entry'}
+                            </div>
+                            <div class="h-actions">
+                                <i class="fas fa-check-circle"></i> ${status}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+
+            container.innerHTML = html;
+        }
+
+        function saveEntry() {
+            const todayEntry = getTodayEntry();
+            
+            const letter = document.getElementById('letterInput');
+            const reflection = document.getElementById('reflectionInput');
+            
+            todayEntry.letter = letter.value.trim();
+            todayEntry.reflection = reflection.value.trim();
+            
+            saveData();
+            renderHistory();
+            renderStats();
+            renderCalendar();
+            showToast('📝 Everything saved for today');
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            clearTimeout(toast._timeout);
+            toast._timeout = setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // ----- AUTO-SAVE -----
+        function autoSave() {
+            const todayEntry = getTodayEntry();
+            const letter = document.getElementById('letterInput');
+            const reflection = document.getElementById('reflectionInput');
+            
+            if (letter && letter.value !== todayEntry.letter) {
+                todayEntry.letter = letter.value.trim();
+                saveData();
+            }
+            if (reflection && reflection.value !== todayEntry.reflection) {
+                todayEntry.reflection = reflection.value.trim();
+                saveData();
+            }
+        }
+
+        // ----- INIT -----
+        function init() {
+            loadData();
+            getTodayEntry();
+
+            renderPrompt();
+            renderLog();
+            renderLetter();
+            renderReflection();
+            renderCalendar();
+            renderHistory();
+            renderStats();
+
+            document.getElementById('saveBtn').addEventListener('click', saveEntry);
+
+            const letterInput = document.getElementById('letterInput');
+            const reflectionInput = document.getElementById('reflectionInput');
+            
+            letterInput.addEventListener('input', updateLetterCharCount);
+            reflectionInput.addEventListener('input', updateCharCount);
+
+            setInterval(autoSave, 15000);
+
+            [letterInput, reflectionInput].forEach(el => {
+                el.addEventListener('keydown', function(e) {
+                    if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                        e.preventDefault();
+                        saveEntry();
+                    }
+                });
+            });
+
+            setTimeout(() => {
+                showToast('🌱 Today is a new day. Show up.');
+            }, 500);
+        }
+
+        document.addEventListener('DOMContentLoaded', init);
+    })();
+</script>
+
+</body>
+</html>
